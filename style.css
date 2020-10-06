@@ -1,0 +1,112 @@
+/* font-family: 'Lobster Two', cursive;
+font-family: 'Courgette', cursive; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mar:10px;
+    --pad: 10px 5px;
+    --f1:'Lobster Two', cursive;
+    --f2:'Courgette', cursive;
+}
+main{
+    width: 500px;
+    margin: 100px auto 50px;
+}
+
+.header{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: hotpink;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    font-family: var(--f1);
+}
+.task-creator{
+    border: 1px solid rgba(192, 192, 192, 0.425);
+    display: grid;
+    grid-template-columns: 400px 85px;
+    padding: var(--pad);
+}
+.task-creator input{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid hotpink;
+    width: 95%;
+    font-size: 25px;
+    animation-name: move;
+    animation-duration: 1s;
+}
+.task-creator button{
+    background-color: hotpink;
+    color: white;
+    border: none;
+    font-size: 30px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.task{
+    padding:var(--pad);
+    display: grid;
+    grid-template-columns: 355px 140px;
+    border: 1px solid rgba(192, 192, 192, 0.425);
+    font-family: var(--f2);
+}
+.add{
+    cursor: pointer;
+}
+.text{
+    width: 95%;
+    font-family: var(--f2);
+    font-size: 20px;
+}
+.task-input{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid blue;
+    width: 95%;
+    font-family: var(--f2);
+    font-size: 25px;
+    animation-name: move;
+    animation-duration: 1s;
+}
+.edit, .delete{
+    padding: 10px;
+    background-color: hotpink;
+    color: white;
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    font-weight: 100;
+    font-family: var(--f2);
+    cursor: pointer;
+}
+.edit:focus, .delete:focus,input:focus,.add:focus{
+    outline: none;
+}
+.task-text{
+    position: relative;
+}
+
+.text{
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+
+@keyframes move{
+    from{
+        width: 1%;
+    }
+    to{
+        width: 95%;
+    }
+}
